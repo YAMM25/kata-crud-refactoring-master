@@ -1,7 +1,7 @@
-package co.com.sofka.crud.Controllers;
+package co.com.sofka.crud.controllers;
 
-import co.com.sofka.crud.Entity.Todo;
-import co.com.sofka.crud.Services.TodoService;
+import co.com.sofka.crud.entity.Todo;
+import co.com.sofka.crud.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +36,7 @@ public class TodoController {
     }
 
     @GetMapping(value = "api/{id}/todo")
-    public Todo get(@PathVariable("id") Long id){
+    public Todo get(@PathVariable("id") Long gitid){
         return service.get(id);
     }
 
