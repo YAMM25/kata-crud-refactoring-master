@@ -36,7 +36,7 @@ public class TodoController {
     }
 
     @GetMapping(value = "api/{id}/todo")
-    public Todo get(@PathVariable("id") Long gitid){
+    public Todo get(@PathVariable("id") Long id){
         return service.get(id);
     }
 
