@@ -1,9 +1,7 @@
 package co.com.sofka.crud.repository;
 
-import co.com.sofka.crud.entity.MayorList;
-import co.com.sofka.crud.entity.Todo;
+import co.com.sofka.crud.entity.ListTodo;
 import org.springframework.data.repository.CrudRepository;
 
-public interface ListRepository extends CrudRepository<MayorList, Long> {
-
+public interface ListRepository extends CrudRepository<ListTodo,Long> {
 }

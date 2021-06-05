@@ -3,9 +3,7 @@ package co.com.sofka.crud.entity;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
-@Table( name = "listTodo")
-public interface ListTodo {
+public class ListTodo {
     @Id
     @GeneratedValue
 
@@ -14,7 +12,7 @@ public interface ListTodo {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "identity")
-    //Se instancia la entidad
+
     private Set<Todo> todo;
 
     public Set<Todo> getTodo() {
@@ -36,5 +34,4 @@ public interface ListTodo {
     public void setGroupname(String groupname) {
         this.groupname = groupname;
     }
-
 }

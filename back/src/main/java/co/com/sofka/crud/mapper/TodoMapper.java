@@ -6,10 +6,11 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-
+//import org.springframework.web.bind.annotation.Mapping;
 
 @Mapper(componentModel = "spring")
-public class TodoMapper {
+public interface TodoMapper {
+
     @Mappings({
             @Mapping(source = "name", target = "nameDTO"),
             @Mapping(source = "completed", target = "completedDTO"),
@@ -20,4 +21,5 @@ public class TodoMapper {
 
     @InheritInverseConfiguration
     Todo toTodo(TodoDTO todoDTO);
+
 }
